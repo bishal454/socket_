@@ -35,7 +35,7 @@ int main(int argc , char *argv[] ){
     }
 
 client.sin_family=AF_INET;
-client.sin_port=htons(atio(argv[2]));
+client.sin_port=htons(atoi(argv[2]));
 client.sin_addr.s_addr=inet_addr(argv[1]);
 
 bzero(client.sin_zero,8);
