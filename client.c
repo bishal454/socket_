@@ -14,7 +14,7 @@
 #define MAX_DATA 1024
 
 
-int main(int argc , char * argv ){
+int main(int argc , char *argv[] ){
     int data_len ;
     int sock ;
     char input[MAX_DATA], output[MAX_DATA];
@@ -55,7 +55,7 @@ while(1){
     fgets(input ,MAX_DATA,stdin);
     send(sock ,input,strlen(input),0);
     data_len=recv(sock,output,MAX_DATA,0);
-    output [data_len]="\0";
+    output [data_len]='\0';
     printf("%s\n",output);
 
 }
